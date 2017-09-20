@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ex.phongtoda.songtrang.MainActivity">
+    <RelativeLayout
+        android:id="@+id/Rl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<TextView
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:text="Đăng kí làm gia sư"
+    android:background="@color/colorBlue"
+    android:textColor="#FFFFFF"
+    android:gravity="center"
+    />
+    <TextView
+        android:id="@+id/TVhoten"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Họ và Tên: "
+        android:layout_below="@+id/title"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/editHTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/TVhoten" />
+
+    <TextView
+        android:id="@+id/lop"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Năm sinh:"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:layout_below="@id/editHTen"/>
+
+    <EditText
+        android:id="@+id/ednamsinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_below="@+id/lop" />
+
+    <TextView
+        android:id="@+id/TVgioitinh"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Giới tính: "
+        android:textSize="15sp"
+        android:layout_below="@+id/ednamsinh"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+        <RadioGroup
+            android:id="@+id/RadioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ednamsinh">
+            <RadioButton
+                android:id="@+id/radioNam"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="150dp"
+                android:text="Nam"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioNu"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Nữ"
+                android:checked="false"
+                android:layout_marginLeft="150dp"
+                />
+        </RadioGroup>
+
+
+
+        <TextView
+        android:id="@+id/TVnghenghiep"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Nghề nghiệp:"
+        android:layout_below="@+id/TVgioitinh"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/ednghenghiep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_below="@+id/TVnghenghiep"/>
+    <TextView
+        android:id="@+id/TVsdt"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="Số điện thoại: "
+        android:textSize="15sp"
+        android:layout_below="@+id/ednghenghiep"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
+    <EditText
+        android:id="@+id/edsdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TVsdt"
+        android:inputType="phone"
+        />
+
+    <TextView
+        android:id="@+id/TVque"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/edsdt"
+        android:text="Quê quán: "
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+    <EditText
+        android:id="@+id/edque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_below="@id/TVque"/>
+
+    <TextView
+        android:id="@+id/TVluong"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/edque"
+        android:textSize="15sp"
+        android:text="Lương mong muốn:"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/edluong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TVluong"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/TVmon"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:text="Có thể dạy các môn:"
+        android:textSize="15dp"
+        android:layout_below="@+id/edluong"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <EditText
+        android:id="@+id/edmon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_below="@+id/TVmon" />
+        <Button
+            android:id="@+id/btnDangKy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký"
+            android:layout_below="@id/edmon"
+            android:layout_centerInParent="true"
+
+            />
+
+</RelativeLayout>
+
+
+
+</ScrollView>
